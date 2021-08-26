@@ -22,7 +22,7 @@ class Herois {
         const novoHeroi = req.body
         try {
             const heroiCriado = await dataBase.herois.create(novoHeroi)
-            return res.status(200).json(heroiCriado)
+            return res.status(201).json(heroiCriado)
             
         } catch (error) {
             return res.status(400).json(error.message)

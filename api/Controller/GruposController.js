@@ -24,7 +24,7 @@ class GruposController {
         const novoGrupo = req.body
         try {
             const grupoCriado = await dataBase.Grupos.create(novoGrupo)
-            res.status(200).json(grupoCriado)
+            res.status(201).json(grupoCriado)
         } catch (error) {
             res.status(400).json(error.message)
         }
